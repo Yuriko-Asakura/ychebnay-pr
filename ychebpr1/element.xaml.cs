@@ -27,5 +27,12 @@ namespace ychebpr1
             InitializeComponent();
             ycheb.ItemsSource = elements.GetData();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            elementTableAdapter elements = new elementTableAdapter();
+            elements.InsertQuery(tx.Text);
+            ycheb.ItemsSource = elements.GetData();
+        }
     }
 }

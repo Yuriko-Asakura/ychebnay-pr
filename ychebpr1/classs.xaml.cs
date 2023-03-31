@@ -27,5 +27,11 @@ namespace ychebpr1
             InitializeComponent();
             ycheb.ItemsSource = clas.GetData();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            clas.InsertQuery(tx.Text, tx2.Text);
+            ycheb.ItemsSource = clas.GetData();
+        }
     }
 }

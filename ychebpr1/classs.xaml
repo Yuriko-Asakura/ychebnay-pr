@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="classs" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name='ycheb' Margin="34,34,415,255"/>
+        <DataGrid x:Name='ycheb' Margin="34,34,400,27"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="526,53,0,0" VerticalAlignment="Top" Height="27" Width="100" Click="Button_Click"/>
+        <TextBox x:Name="tx" HorizontalAlignment="Left" Margin="483,112,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="184" Height="38"/>
+        <TextBox x:Name="tx2" HorizontalAlignment="Left" Margin="483,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="184" Height="25"/>
     </Grid>
 </Window>

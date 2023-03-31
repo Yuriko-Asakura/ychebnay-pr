@@ -64,6 +64,9 @@
     <Compile Include="element.xaml.cs">
       <DependentUpon>element.xaml</DependentUpon>
     </Compile>
+    <Compile Include="yc1DataSet.cs">
+      <DependentUpon>yc1DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="yc1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

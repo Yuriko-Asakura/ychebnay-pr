@@ -23,12 +23,18 @@ namespace ychebpr1
     {
         CharactesTableAdapter charactes = new CharactesTableAdapter();
         NameeTableAdapter name = new NameeTableAdapter();
+        elementTableAdapter el = new elementTableAdapter();
+        classTableAdapter cl = new classTableAdapter();
         public MainWindow()
         {
             InitializeComponent();
             ycheb.ItemsSource = charactes.GetData();
-            Combo.ItemsSource = name.GetData();
-            Combo.DisplayMemberPath = "namee";
+            t1.ItemsSource = name.GetData();
+            t1.DisplayMemberPath = "Namee_id";
+            t2.ItemsSource = el.GetData();
+            t2.DisplayMemberPath = "element_id";
+            t3.ItemsSource = cl.GetData();
+            t3.DisplayMemberPath = "class_id";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -51,8 +57,14 @@ namespace ychebpr1
 
         private void Combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            object sel = (Combo.SelectedItem as DataRowView).Row[0];
+            object sel = (t1.SelectedItem as DataRowView).Row[0];
             MessageBox.Show(sel.ToString());
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            charactes.InsertQuery(Convert.ToInt32(t1.Text), Convert.ToInt32(t1.Text), Convert.ToInt32(t1.Text));// Convert.ToInt32(t2.Text), Convert.ToInt32(t3.Text));
+            ycheb.ItemsSource = charactes.GetData();
         }
     }
 }

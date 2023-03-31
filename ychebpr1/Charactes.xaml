@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="Charactes" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name='ycheb' Margin="34,34,58,285"/>
+        <DataGrid x:Name='ycheb' Margin="34,34,58,116"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="150,346,0,0" VerticalAlignment="Top" Height="27" Width="100" Click="Button_Click"/>
+        <TextBox x:Name="tx" HorizontalAlignment="Left" Margin="276,340,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="184" Height="38"/>
+        <TextBox x:Name="tx2" HorizontalAlignment="Left" Margin="483,346,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tx3" HorizontalAlignment="Left" Margin="622,342,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

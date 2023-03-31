@@ -19,11 +19,16 @@ namespace ychebpr1
     /// Логика взаимодействия для Charactes.xaml
     /// </summary>
     public partial class Charactes : Window
-    {
+    {NameeTableAdapter name = new NameeTableAdapter();
         public Charactes()
         {
             InitializeComponent();
-            NameeTableAdapter name = new NameeTableAdapter();
+            ycheb.ItemsSource = name.GetData();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            name.InsertQuery(tx.Text,tx2.Text, Convert.ToInt32(tx3.Text));
             ycheb.ItemsSource = name.GetData();
         }
     }
